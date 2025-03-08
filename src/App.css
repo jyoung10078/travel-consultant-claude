@@ -95,4 +95,39 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+}
+
+.fetch-plan-container-plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f1d3a8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.fetch-plan-container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fetch-plan-container-plan-container > button {
+  padding: 0.75rem;
+  border-radius: 7px;
+  border: 1px solid #00000011;
+  font-size: 1.25rem;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffefd;
+  color: #000000;
+  cursor: pointer;
+  width: 150px;
+  margin-left: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }

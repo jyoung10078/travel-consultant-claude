@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { getPlan } from './ai'
 export default function Body() {
 
     const [destination, setDestination] = useState('')
@@ -43,7 +43,13 @@ export default function Body() {
                 </div>
             ) : null}
             {destination || lengthOfStay || attactions ? <div className="fetch-plan-container">
-                <button type="button">Fetch Plan</button>
+                <div className="fetch-plan-container-plan-container">
+                    <div className="fetch-plan-container-text">
+                        <h1>Ready for a plan?</h1>
+                        <p>Click the button below to get a detailed itinerary for your trip.</p>
+                    </div>
+                    <button type="button" onClick={getPlan}>Get Plan</button>
+                </div>
             </div> : null}
         </main>
     )

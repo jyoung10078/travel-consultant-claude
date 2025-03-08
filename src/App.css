@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dee9f6;
+  color: #000000;
+  padding: 1rem;
+  height: 130px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.logo > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 7px;
+  margin-right: 1rem;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin: 0;
+}

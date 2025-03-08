@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dee9f6;
+  background-color: #f1d3a8;
   color: #000000;
   padding: 1rem;
   height: 130px;
@@ -30,4 +30,37 @@ h1 {
   font-size: 2.5rem;
   font-weight: 100;
   margin: 0;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.input-container > input {
+  width: 25%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border-radius: 7px;
+  border: 1px solid #0000003a;
+  font-size: 1.25rem;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+  margin-right: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-container > button {
+  padding: 0.75rem;
+  border-radius: 7px;
+  border: 1px solid #00000011;
+  font-size: 1.25rem;
+  font-weight: 100;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1d3a8;
+  color: #000000;
+  cursor: pointer;
+  width: 150px;
 }

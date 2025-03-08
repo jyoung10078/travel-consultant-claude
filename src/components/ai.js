@@ -2,7 +2,8 @@ import Anthropic from "@anthropic-ai/sdk";
 
 
 const anthropic = new Anthropic({
-    apiKey: process.env.REACT_APP_ANTHROPIC_API_KEY,
+    apiKey: import.meta.env.REACT_APP_ANTHROPIC_API_KEY,
+    dangerouslyAllowBrowser: true
 });
 
 const SYSTEM_PROMPT = `You are a knowledgeable travel consultant who creates detailed, 
@@ -13,7 +14,8 @@ const SYSTEM_PROMPT = `You are a knowledgeable travel consultant who creates det
     safety, and seasonal factors. Offer alternative options for different budgets and suggest
     day trips if relevant. Format responses clearly with bullet points or sections for easy 
     reading. Ensure recommendations align with user preferences, enhancing their trip with 
-    useful, practical advice.`
+    useful, practical advice. Format your response in markdown to make it easier to render
+    to a web page.`
 
 export async function getPlan(destination, lengthOfStay, attractions) {
     const vacationPlanString = `I am going to ${destination} for ${lengthOfStay} days and I want to do ${attractions}. Please give me a list of things to do.`

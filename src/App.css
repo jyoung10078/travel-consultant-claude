@@ -63,4 +63,36 @@ h1 {
   color: #000000;
   cursor: pointer;
   width: 150px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0 0 1rem;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-size: 1.5rem;
+  padding: 2rem;
+  padding-left: 15rem;
+}
+
+.output-container > h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.output-container > ul {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-left: 1rem;
+}
+
+.fetch-plan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

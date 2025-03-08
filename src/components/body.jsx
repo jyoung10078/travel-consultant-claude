@@ -22,6 +22,7 @@ export default function Body() {
         setDestination('')
         setLengthOfStay('')
         setAttactions('')
+        setPlan('')
     }
 
     const [plan, setPlan] = useState('')
@@ -50,7 +51,7 @@ export default function Body() {
                     </ul>
                 </div>
             ) : null}
-            {destination || lengthOfStay || attactions ? <div className="fetch-plan-container">
+            {destination && lengthOfStay && attactions ? <div className="fetch-plan-container">
                 <div className="fetch-plan-container-plan-container">
                     <div className="fetch-plan-container-text">
                         <h1>Ready for a plan?</h1>

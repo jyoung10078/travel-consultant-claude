@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { getPlan } from './ai'
+import VacationPlan from './vacationPlan'
 export default function Body() {
 
     const [destination, setDestination] = useState('')

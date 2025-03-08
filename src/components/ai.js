@@ -1,8 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
-
+import { ANTHROPIC_API_KEY } from '/api_key'
 
 const anthropic = new Anthropic({
-    apiKey: import.meta.env.REACT_APP_ANTHROPIC_API_KEY,
+    apiKey: ANTHROPIC_API_KEY,
     dangerouslyAllowBrowser: true
 });
 
@@ -22,10 +22,13 @@ export async function getPlan(destination, lengthOfStay, attractions) {
 
     const msg = await anthropic.messages.create({
         model: "claude-3-haiku-20240307",
-        max_tokens: 1000,
+        max_tokens: 1024,
         system: SYSTEM_PROMPT,
-        messages: [{ role: "user", content: vacationPlanString }],
+        messages: [{ role: "user", content: vacationPlanString },],
     });
+
+    console.log(msg.content[0].text)
+    console.log(ANTHROPIC_API_KEY)
 
     return msg.content[0].text
 }

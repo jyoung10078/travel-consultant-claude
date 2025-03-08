@@ -1,9 +1,10 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { ANTHROPIC_API_KEY } from '/api_key'
+
+const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY;
 
 const anthropic = new Anthropic({
-    apiKey: ANTHROPIC_API_KEY,
-    dangerouslyAllowBrowser: true
+    apiKey: apiKey,
+    dangerouslyAllowBrowser: true,
 });
 
 const SYSTEM_PROMPT = `You are a knowledgeable travel consultant who creates detailed, 
@@ -26,9 +27,6 @@ export async function getPlan(destination, lengthOfStay, attractions) {
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: vacationPlanString },],
     });
-
-    console.log(msg.content[0].text)
-    console.log(ANTHROPIC_API_KEY)
 
     return msg.content[0].text
 }

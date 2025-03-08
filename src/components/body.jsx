@@ -23,6 +23,13 @@ export default function Body() {
         setAttactions('')
     }
 
+    const [plan, setPlan] = useState('')
+
+    async function handleGetPlan() {
+        const plan = await getPlan(destination, lengthOfStay, attactions)
+        setPlan(plan)
+    }
+
     return (
         <main>
             <form action={handleAction} className="input-container">
@@ -48,9 +55,10 @@ export default function Body() {
                         <h1>Ready for a plan?</h1>
                         <p>Click the button below to get a detailed itinerary for your trip.</p>
                     </div>
-                    <button type="button" onClick={getPlan}>Get Plan</button>
+                    <button type="button" onClick={handleGetPlan}>Get Plan</button>
                 </div>
             </div> : null}
+            {plan ? <VacationPlan plan={plan} /> : null}
         </main>
     )
 }

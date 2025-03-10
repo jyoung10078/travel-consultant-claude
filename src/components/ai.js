@@ -19,11 +19,10 @@ const SYSTEM_PROMPT = `You are a knowledgeable travel consultant who creates det
     to a web page.`
 
 export async function getPlan(destination, lengthOfStay, attractions) {
-    const vacationPlanString = `I am going to ${destination} for ${lengthOfStay} days and I want to do ${attractions}. Please give me a list of things to do.`
+    const vacationPlanString = `I am going to ${destination} for ${lengthOfStay} and I want to do ${attractions}. Please give me a list of things to do.`
 
     const msg = await anthropic.messages.create({
         model: "claude-3-haiku-20240307",
-        max_tokens: 1024,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: vacationPlanString },],
     });

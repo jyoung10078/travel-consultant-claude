@@ -39,9 +39,25 @@ h1 {
   padding: 2rem;
 }
 
-.input-container > input {
+.input-container-form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.input-container-form-group > label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+}
+
+.input-container-form-group > input {
   width: 25%;
   max-width: 400px;
+  min-width: 300px;
   padding: 0.75rem;
   border-radius: 7px;
   border: 1px solid #0000003a;
@@ -130,6 +146,15 @@ h1 {
   width: 150px;
   margin-left: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.fetch-plan-container-plan-container > button:hover {
+  background-color: lightgray;
+}
+
+.fetch-plan-container-plan-container > button:active {
+  background-color: #f1d3a8;
 }
 
 .vacation-plan {

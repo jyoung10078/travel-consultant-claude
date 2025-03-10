@@ -24,7 +24,10 @@ export async function getPlan(destination, lengthOfStay, attractions) {
     const msg = await anthropic.messages.create({
         model: "claude-3-haiku-20240307",
         system: SYSTEM_PROMPT,
-        messages: [{ role: "user", content: vacationPlanString },],
+        messages: [{ role: "user", content: vacationPlanString }],
+        headers: {
+            "Authorization": `Bearer ${apiKey}`,  // Manually add the API key in the header
+        },
     });
 
     return msg.content[0].text

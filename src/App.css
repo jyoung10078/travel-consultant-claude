@@ -185,3 +185,14 @@ h1 {
   line-height: 1.5;
   margin-left: 1rem;
 }
+
+section {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-left: 1rem;
+  padding: 2rem;
+  background-color: #f1d3a8;
+  border-radius: 10px;
+}

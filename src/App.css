@@ -55,8 +55,8 @@ h1 {
 }
 
 .input-container-form-group > input {
-  width: 25%;
-  max-width: 400px;
+  width: 450px;
+  max-width: 600px;
   min-width: 300px;
   padding: 0.75rem;
   border-radius: 7px;
@@ -78,7 +78,8 @@ h1 {
   background-color: #f1d3a8;
   color: #000000;
   cursor: pointer;
-  width: 150px;
+  width: 200px;
+  min-width: 150px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin: 0 0 0 1rem;
 }

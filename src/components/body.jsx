@@ -28,17 +28,15 @@ export default function Body() {
                 <div className="input-container-form-group">
                     <input type="text" name="inputItems" placeholder="e.g. I'm going to Paris for 5 days" />
                 </div>
-                <button type="submit">Enter</button>
+                <button type="submit">+ Add Plan Item</button>
             </form>
             {inputItems.length > 3 ? (
                 <div className="output-container">
                     <h1>Your Trip:</h1> 
                     <ul>
-                        {
-                            inputItems.map((item, index) => (
+                        {inputItems.map((item, index) => (
                                 <li key={index}>{item}</li>
-                            ))
-                        }
+                            ))}
                     </ul>
                 </div>
             ) : null}

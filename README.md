@@ -2,6 +2,8 @@
 
 **Travel Consultant Claude** is a simple web application that helps users plan their upcoming vacations by allowing them to input key plan items. It uses the **Anthropic API** for natural language processing to generate a detailed itinerary based on the user's preferences and inputs. The application is built with **React**.
 
+**Deployed using Vercel:** https://travel-consultant-claude.vercel.app/(https://travel-consultant-claude.vercel.app/)
+
 ![Main Screen](images/mainscreen.png)
 ![Travel Plans](images/travelplans.png)
 

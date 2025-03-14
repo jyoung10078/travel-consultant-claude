@@ -181,37 +181,21 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+}
+
+.vacation-plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
   padding: 2rem;
-  background-color: #f1d3a8;
+  width: 800px;
+  min-width: 300px;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  width: 50%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 26rem;
-}
-
-.vacation-plan > h1 {
+  font-size: 1rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-.vacation-plan > ReactMarkdown {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.5;
-  margin-left: 1rem;
-}
-
-section {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 100;
-  line-height: 1.5;
-  margin-left: 1rem;
-  padding: 2rem;
-  background-color: #f1d3a8;
-  border-radius: 10px;
 }

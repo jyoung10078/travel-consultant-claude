@@ -10,11 +10,6 @@ export default function Body() {
         inputItems && setInputItems(prevInputItems => [...prevInputItems, inputItems])
     }
 
-    function handleClear() {
-        setInputItems([])
-        setPlan('')
-    }
-
     const [plan, setPlan] = useState('')
 
     async function handleGetPlan() {

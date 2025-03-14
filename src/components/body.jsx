@@ -24,12 +24,13 @@ export default function Body() {
 
     return (
         <main>
-            <form action={handleAction} className="input-container">
-                <div className="input-container-form-group">
-                    <input type="text" name="inputItems" placeholder="e.g. Paris, 5 days, museums, etc." />
-                </div>
-                <button type="submit">+ Add Plan Item</button>
-            </form>
+            <div className="main-container">
+                <form action={handleAction} className="input-container">
+                    <div className="input-container-form-group">
+                        <input type="text" name="inputItems" placeholder="e.g. Paris, 5 days, museums, etc." />
+                    </div>
+                    <button type="submit">+ Add Plan Item</button>
+                </form>
                 <div className="output-container">
                     {inputItems.length > 0 ? <h1>Your Trip:</h1> : null} 
                     <ul>
@@ -38,6 +39,7 @@ export default function Body() {
                             ))}
                     </ul>
                 </div>
+            </div>
             {inputItems.length > 2 ? <div className="fetch-plan-container">
                 <div className="fetch-plan-container-plan-container">
                     <div className="fetch-plan-container-text">

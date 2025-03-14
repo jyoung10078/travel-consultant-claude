@@ -32,6 +32,13 @@ h1 {
   margin: 0;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .input-container {
   display: flex;
   justify-content: center;
@@ -85,12 +92,13 @@ h1 {
 }
 
 .output-container {
+  width: 800px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: left;
   font-size: 1.5rem;
-  margin-left: 20rem;
 }
 
 .output-container > h1 {
@@ -101,10 +109,11 @@ h1 {
 
 .output-container > ul {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 100;
-  line-height: 1.5;
+  line-height: 2;
   margin-left: 1rem;
+  opacity: 0.6;
 }
 
 .fetch-plan-container {

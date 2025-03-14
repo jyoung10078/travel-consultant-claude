@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { getPlan } from './ai'
 import VacationPlan from './vacationPlan'
 export default function Body() {
@@ -16,6 +16,19 @@ export default function Body() {
         const plan = await getPlan(inputItems)
         setPlan(plan)
     }
+
+    // Getting my plan to scroll to the top of the page
+    const planSection = useRef(null)
+
+    useEffect(() => {
+        if (plan !== "" && planSection.current !== null) {
+            const yCoord = planSection.current.getBoundingClientRect().top + window.scrollY
+            window.scroll({
+                top: yCoord,
+                behavior: "smooth"
+            })
+        }
+    }, [plan])
 
     return (
         <main>
@@ -44,7 +57,7 @@ export default function Body() {
                     <button type="button" onClick={handleGetPlan}>Get Plan</button>
                 </div>
             </div> : null}
-            {plan ? <VacationPlan plan={plan} /> : null}
+            {plan ? <VacationPlan ref={planSection} plan={plan} /> : null}
         </main>
     )
 }

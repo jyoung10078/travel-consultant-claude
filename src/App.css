@@ -37,6 +37,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  margin-top: 2rem;
 }
 
 .input-container-form-group {
@@ -44,7 +45,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 
 .input-container-form-group > label {
@@ -55,7 +55,7 @@ h1 {
 }
 
 .input-container-form-group > input {
-  width: 450px;
+  width: 600px;
   max-width: 600px;
   min-width: 300px;
   padding: 0.75rem;
@@ -90,13 +90,12 @@ h1 {
   justify-content: left;
   align-items: left;
   font-size: 1.5rem;
-  padding: 2rem;
-  padding-left: 15rem;
+  margin-left: 20rem;
 }
 
 .output-container > h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -132,6 +131,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-left: 1rem;
 }
 
 .fetch-plan-container-plan-container > button {

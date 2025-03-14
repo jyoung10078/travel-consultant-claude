@@ -26,21 +26,19 @@ export default function Body() {
         <main>
             <form action={handleAction} className="input-container">
                 <div className="input-container-form-group">
-                    <input type="text" name="inputItems" placeholder="e.g. I'm going to Paris for 5 days" />
+                    <input type="text" name="inputItems" placeholder="e.g. Paris, 5 days, museums, etc." />
                 </div>
                 <button type="submit">+ Add Plan Item</button>
             </form>
-            {inputItems.length > 3 ? (
                 <div className="output-container">
-                    <h1>Your Trip:</h1> 
+                    {inputItems.length > 0 ? <h1>Your Trip:</h1> : null} 
                     <ul>
                         {inputItems.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                     </ul>
                 </div>
-            ) : null}
-            {inputItems.length > 3 ? <div className="fetch-plan-container">
+            {inputItems.length > 2 ? <div className="fetch-plan-container">
                 <div className="fetch-plan-container-plan-container">
                     <div className="fetch-plan-container-text">
                         <h1>Ready for a plan?</h1>
